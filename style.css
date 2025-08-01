@@ -1,16 +1,26 @@
-  img-comparison-slider {
-    --divider-width: 2px;
-    --divider-color: #4f0b7b;
-    --default-handle-opacity: 1;
-    --default-handle-color: #4f0b7b;     
-  }
-
-  .lato-bold {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+/* Estilos generales del cuerpo */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
 }
 
+/* Contenedor central */
+.centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  max-width: 800px;
+}
+
+/* Estilos para títulos */
 h1 {
   color: #4f0b7b;
   text-align: center;
@@ -20,13 +30,11 @@ h2 {
   color: #4f0b7b;
 }
 
-.centro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 90%;
-        max-width: 800px;
+/* Tipografía personalizada */
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .lato-regular {
@@ -35,14 +43,27 @@ h2 {
   font-style: normal;
 }
 
+/* Estilos del slider de comparación */
+img-comparison-slider {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: none;
 
-  body {
-    margin: 0;
-        padding: 0;
-        font-family: 'Lato', sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #ffffff;
-  }
+  --divider-width: 2px;
+  --divider-color: #4f0b7b;
+  --default-handle-opacity: 1;
+  --default-handle-color: #4f0b7b;
+}
+
+/* Estilo adicional para el handle (deslizador) */
+img-comparison-slider::part(handle) {
+  background-color: #4f0b7b;
+}
+
+/* Asegura que las imágenes dentro del slider escalen bien */
+img-comparison-slider img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
